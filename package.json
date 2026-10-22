@@ -1,0 +1,30 @@
+{
+  "name": "alasql-mysqltest",
+  "version": "0.1.0",
+  "description": "The MySQL server tests (mysql-test/t) run against AlaSQL",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "cmdmix 'bun run runner/run.js %1 > results/output.md'",
+    "fetch": "bun run runner/fetch.js",
+    "triage": "bun run runner/triage.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlaSQL/alasql-mysqltest"
+  },
+  "keywords": [
+    "sql",
+    "test",
+    "MySQL",
+    "AlaSQL"
+  ],
+  "author": "Mathias Rangel Wulff",
+  "license": "MIT",
+  "dependencies": {
+    "alasql": "^4.20.1"
+  },
+  "devDependencies": {
+    "cmdmix": "2.2.2"
+  }
+}

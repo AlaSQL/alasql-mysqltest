@@ -1,0 +1,8 @@
+--echo #
+--echo # WL#13075: Support TLS session reuse in the C API TLS v1.3
+--echo #
+source include/check_openssl_version.inc;
+source include/have_tlsv13.inc;
+
+let $tls_version=tlsv1.3;
+source include/ssl_cache.inc;

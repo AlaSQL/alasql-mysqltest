@@ -1,0 +1,10 @@
+node_modules
+
+# Left by an interrupted runner/fetch.js
+.fetch-*
+
+# Scratch files
+tmp
+
+# Written by the runner with --debug, replaced on every run
+results/debug.jsonl
