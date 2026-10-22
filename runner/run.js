@@ -240,3 +240,6 @@ console.log(`* Workers replaced after growing past ${fmt(config.workerMB)} MB: $
 console.log(`* Final score: ${pct(total.pass, checked)} % of the checked statements were OK\n`);
 console.log(`Total script time: ${((performance.now() - started) / 1000).toFixed(1)}s\n`);
 console.log("_Repeated failures are sampled; run with --printAllErrors to see every one, or --debug for results/debug.jsonl_");
+
+// a worker stopped in the middle of a statement may keep its thread busy; the report is complete, so end here
+process.exit(0);
